@@ -1,37 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?>
-
-<!--
--->
-
 <plugin>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated management -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="school.managment.model.presentation.SchoolModelWizardID"
-            name="%_UI_SchoolModelWizard_label"
-            class="school.managment.model.presentation.SchoolModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/SchoolModelFile.gif">
-         <description>%_UI_SchoolModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated management -->
-      <editor
-            id="school.managment.model.presentation.SchoolEditorID"
-            name="%_UI_SchoolEditor_label"
-            icon="icons/full/obj16/SchoolModelFile.gif"
-            extensions="mgmt"
-            class="school.managment.model.presentation.SchoolEditor"
-            contributorClass="school.managment.model.presentation.SchoolActionBarContributor">
-      </editor>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="Test"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/School.Management.Editor/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="Test">
+         </property>
+      </product>
    </extension>
 
 </plugin>
